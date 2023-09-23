@@ -144,65 +144,65 @@ class _PrimaryArcAnimationComponentState
       width: widget.arcWidth + widget.backgroundArcStrokeThickness,
       // decoration: BoxDecoration(border: Border.all()),
       child: AnimatedBuilder(
-          animation: scoreProgressAnimation,
-          builder: (context, child) {
-            return Stack(
-              alignment: Alignment.bottomCenter,
-              children: [
-                CustomPaint(
-                  painter: BasicArcProgressPainter(
-                    currentValue: scoreProgressAnimation.value,
-                    destinatonValue: widget.score,
-                    totalValue: widget.maxScore,
-                    arcHeight: widget.arcHeight,
-                    arcWidth: widget.arcWidth,
-                    backgroundArcStrokeThickness:
-                        widget.backgroundArcStrokeThickness,
-                    progressArcStrokeThickness:
-                        widget.progressArcStrokeThickness,
-                    arcBackgroundColor: widget.arcBackgroundColor,
-                    arcProgressGradientColors: widget.arcProgressGradientColors,
-                    enableStepperEffect: widget.enableStepperEffect,
-                    isRoundEdges: widget.isRoundEdges,
-                    isPrgressCurveFilled: widget.isPrgressCurveFilled,
-                  ),
+        animation: scoreProgressAnimation,
+        builder: (context, child) {
+          return Stack(
+            alignment: Alignment.bottomCenter,
+            children: [
+              CustomPaint(
+                painter: BasicArcProgressPainter(
+                  currentValue: scoreProgressAnimation.value,
+                  destinatonValue: widget.score,
+                  totalValue: widget.maxScore,
+                  arcHeight: widget.arcHeight,
+                  arcWidth: widget.arcWidth,
+                  backgroundArcStrokeThickness:
+                      widget.backgroundArcStrokeThickness,
+                  progressArcStrokeThickness: widget.progressArcStrokeThickness,
+                  arcBackgroundColor: widget.arcBackgroundColor,
+                  arcProgressGradientColors: widget.arcProgressGradientColors,
+                  enableStepperEffect: widget.enableStepperEffect,
+                  isRoundEdges: widget.isRoundEdges,
+                  isPrgressCurveFilled: widget.isPrgressCurveFilled,
                 ),
-                Align(
-                  alignment:
-                      Alignment.bottomCenter, // Adjust alignment as needed
-                  child: AnimatedBuilder(
-                    animation: fontSizeController,
-                    builder: (context, child) {
-                      var score = scoreProgressAnimation.value
-                          .toStringAsFixed(widget.isRoundOffScore ? 0 : 2);
-                      if (scoreProgressController.status !=
-                          AnimationStatus.completed) {
-                        score = scoreProgressAnimation.value.toStringAsFixed(
-                            widget.isRoundOfScoreWhileProgress ? 0 : 2);
-                      }
-                      final outOf = (scoreProgressController.status ==
-                                  AnimationStatus.completed &&
-                              widget.showOutOfScoreFormat)
-                          ? '/${widget.maxScore.toStringAsFixed(0)}'
-                          : '';
-                      return Transform(
-                        transform: Matrix4.identity()
-                          ..rotateY(fontSizeAnimation.value * pi)
-                          ..rotateY(fontSizeAnimation.value * pi),
-                        alignment: FractionalOffset.center,
-                        child: Text(
-                          score + outOf,
-                          style: widget.scoreTextStyle.copyWith(
-                            fontSize: fontSizeAnimation.value,
-                          ),
-                        ),
+              ),
+              Align(
+                alignment: Alignment.bottomCenter, // Adjust alignment as needed
+                child: AnimatedBuilder(
+                  animation: fontSizeController,
+                  builder: (context, child) {
+                    var score = scoreProgressAnimation.value
+                        .toStringAsFixed(widget.isRoundOffScore ? 0 : 2);
+                    if (scoreProgressController.status !=
+                        AnimationStatus.completed) {
+                      score = scoreProgressAnimation.value.toStringAsFixed(
+                        widget.isRoundOfScoreWhileProgress ? 0 : 2,
                       );
-                    },
-                  ),
+                    }
+                    final outOf = (scoreProgressController.status ==
+                                AnimationStatus.completed &&
+                            widget.showOutOfScoreFormat)
+                        ? '/${widget.maxScore.toStringAsFixed(0)}'
+                        : '';
+                    return Transform(
+                      transform: Matrix4.identity()
+                        ..rotateY(fontSizeAnimation.value * pi)
+                        ..rotateY(fontSizeAnimation.value * pi),
+                      alignment: FractionalOffset.center,
+                      child: Text(
+                        score + outOf,
+                        style: widget.scoreTextStyle.copyWith(
+                          fontSize: fontSizeAnimation.value,
+                        ),
+                      ),
+                    );
+                  },
                 ),
-              ],
-            );
-          }),
+              ),
+            ],
+          );
+        },
+      ),
     );
   }
 }
