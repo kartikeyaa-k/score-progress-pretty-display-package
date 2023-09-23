@@ -21,6 +21,6 @@ git add -f $STAGED_FILES
 
 printf "\e[33;1m%s\e[0m\n" 'Success : Flutter Formatter'
 
-echo "dev has run git hooks successfully before pushing code at : $(date +%F-%T)" > git_hook_success.txt
+echo "Dev has run git hooks successfully before pushing code at : $(date +%F-%T)" > git_hook_success.txt
 
 exit 0
