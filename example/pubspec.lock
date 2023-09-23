@@ -108,12 +108,13 @@ packages:
     source: hosted
     version: "1.8.3"
   score_progress_pretty_display:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
-    version: "1.0.0"
+      name: score_progress_pretty_display
+      sha256: "76431470fb637a85152b2fd682eed928b38468fc5291259ac5c924c1f91de3fd"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.2"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -185,3 +186,4 @@ packages:
     version: "0.1.4-beta"
 sdks:
   dart: ">=3.1.0 <4.0.0"
+  flutter: ">=1.17.0"

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// ignore: depend_on_referenced_packages
 import 'package:score_progress_pretty_display/score_progress_pretty_display.dart';
 
 class DashboardScreen extends StatelessWidget {
