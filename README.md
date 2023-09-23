@@ -91,4 +91,4 @@ dart doc .
 
 ## Roadmap 
 
-1. I am planning to add new animations, curves in the next release.
+1. I am planning to add new animations in the next release.

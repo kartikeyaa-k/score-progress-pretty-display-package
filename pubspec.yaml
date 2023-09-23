@@ -1,6 +1,6 @@
 name: score_progress_pretty_display
 description: A Flutter package to display and visualize credit card scores, or any other type of score, in a visually appealing way.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/kartikeyaa-k/score-progress-pretty-display-package
 
 environment:
@@ -59,7 +59,7 @@ screenshots:
     path: previews/preview_1.gif
   - description: 'This preview shows progress bar with score/maxScore'
     path: previews/preview_2.gif
-  - description: 'This preview shows square edges of the arc'
+  - description: 'This preview shows square edges of the arc with slightly thinner width'
     path: previews/preview_3.gif
 
 
