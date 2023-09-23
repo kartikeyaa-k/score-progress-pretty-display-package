@@ -1,0 +1,26 @@
+#!/bin/bash
+source ~/.zshrc
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g')
+# Format code with flutter format
+printf "\e[1;34m%-6s\e[m\n" 'Running : git pre-commit hook'
+printf "\e[33;1m%s\e[0m\n" 'Running : Flutter formatter'
+dart format .
+# return 1 exit code if running checks fails
+if [ $? -ne 0 ]; then
+  printf "\e[31;1m%s\e[0m\n" 'Error : Flutter Formater'
+  exit 1
+fi
+
+RESULT=$?
+
+# return 1 exit code if running checks fails
+[ $RESULT -ne 0 ] && exit 1
+
+# git add .
+git add -f $STAGED_FILES
+
+printf "\e[33;1m%s\e[0m\n" 'Success : Flutter Formatter'
+
+echo "dev has run git hooks successfully before pushing code at : $(date +%F-%T)" > git_hook_success.txt
+
+exit 0

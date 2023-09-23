@@ -1,7 +1,7 @@
 name: score_progress_pretty_display
 description: A new Flutter package project.
 version: 0.0.1
-homepage:
+homepage: https://github.com/kartikeyaa-k/score-progress-pretty-display-package
 
 environment:
   sdk: '>=3.1.0 <4.0.0'

@@ -11,29 +11,60 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A Flutter package to display and visualize credit card scores, or any other type of score, in a visually appealing way.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Customizable:** You can customize the appearance of the score visualization, including the color, size, and animation.
 
-## Getting started
+- **Animated:** The package includes animations to make the score visualization engaging and interactive.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+- **Easy to Use:** Integrating this package into your Flutter project is straightforward and requires minimal setup.
+
+## Installation
+
+Add the following dependency to your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  your_package_name: ^1.0.0 # Use the latest version
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
 
 ```dart
-const like = 'sample';
+PrimaryArcAnimationComponent(
+          score: 77.42,
+          maxScore: 100,
+          arcHeight: 340,
+          arcWidth: 340,
+          backgroundArcStrokeThickness: 10,
+          progressArcStrokeThickness: 10,
+          enableStepperEffect: false,
+          isRoundEdges: false,
+          minScoreTextFontSize: 30,
+          maxScoreTextFontSize: 50,
+          isRoundOfScoreWhileProgress: true,
+          isRoundOffScore: true,
+          showOutOfScoreFormat: true,
+          arcBackgroundColor: Colors.black12,
+          arcProgressGradientColors: [
+            Colors.yellowAccent,
+            Colors.greenAccent,
+            Colors.green,
+          ],
+        ),
 ```
+
+## Example 
+
+For a complete example, check the example directory included with this package.
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+##1. Before submit PR
+Before submit any PR, you need to set githook on your machine by paste and run this command from your terminal at root project 
+```
+git config core.hooksPath .githooks
+```
