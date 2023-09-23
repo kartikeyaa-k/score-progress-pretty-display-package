@@ -1,3 +1,3 @@
-## 0.0.1
+## 1.0.0
 
-* TODO: Describe initial release.
+* This first release contains : Basic arc progress bar, score text with animation and style customizations.
