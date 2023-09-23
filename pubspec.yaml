@@ -55,19 +55,17 @@ flutter:
 
 
 screenshots:
-  - description: 'This screenshot shows package usage on Android with just the score'
-    path: previews/score_progress_pretty_display_1.gif
-  - description: 'This screenshot shows package usage on android with score and total score'
-    path: previews/score_progress_pretty_display_2.gif
-  - description: 'This screenshot shows package usage on iOS with just the score'
-    path: previews/score_progress_pretty_display_3.gif
-  - description: 'This screenshot shows package usage on iOS with score and total score'
-    path: previews/score_progress_pretty_display_4.gif
-  - description: 'This screenshot shows package usage on iOS with square shape instead of round'
-    path: previews/score_progress_pretty_display_5.gif 
+  - description: 'This preview shows progress bar with score'
+    path: previews/preview_1.gif
+  - description: 'This preview shows progress bar with score/maxScore'
+    path: previews/preview_2.gif
+  - description: 'This preview shows square edges of the arc'
+    path: previews/preview_3.gif
 
 
 topics:
   - design
   - score
   - progress
+  - animation
+  - arc progress bar
