@@ -79,10 +79,18 @@ class _PrimaryArcAnimationComponentState
 
   @override
   void initState() {
-    assert(widget.score <= widget.maxScore,
-        'score must be lesser or equal to maxScore');
-    assert(widget.arcHeight > 0, 'arc height must be greater than zero');
-    assert(widget.arcWidth > 0, 'arc width must be greater than zero');
+    assert(
+      widget.score <= widget.maxScore,
+      'score must be lesser or equal to maxScore',
+    );
+    assert(
+      widget.arcHeight > 0,
+      'arc height must be greater than zero',
+    );
+    assert(
+      widget.arcWidth > 0,
+      'arc width must be greater than zero',
+    );
 
     scoreProgressController = AnimationController(
       vsync: this,
@@ -142,21 +150,23 @@ class _PrimaryArcAnimationComponentState
               alignment: Alignment.bottomCenter,
               children: [
                 CustomPaint(
-                    painter: BasicArcProgressPainter(
-                  currentValue: scoreProgressAnimation.value,
-                  destinatonValue: widget.score,
-                  totalValue: widget.maxScore,
-                  arcHeight: widget.arcHeight,
-                  arcWidth: widget.arcWidth,
-                  backgroundArcStrokeThickness:
-                      widget.backgroundArcStrokeThickness,
-                  progressArcStrokeThickness: widget.progressArcStrokeThickness,
-                  arcBackgroundColor: widget.arcBackgroundColor,
-                  arcProgressGradientColors: widget.arcProgressGradientColors,
-                  enableStepperEffect: widget.enableStepperEffect,
-                  isRoundEdges: widget.isRoundEdges,
-                  isPrgressCurveFilled: widget.isPrgressCurveFilled,
-                )),
+                  painter: BasicArcProgressPainter(
+                    currentValue: scoreProgressAnimation.value,
+                    destinatonValue: widget.score,
+                    totalValue: widget.maxScore,
+                    arcHeight: widget.arcHeight,
+                    arcWidth: widget.arcWidth,
+                    backgroundArcStrokeThickness:
+                        widget.backgroundArcStrokeThickness,
+                    progressArcStrokeThickness:
+                        widget.progressArcStrokeThickness,
+                    arcBackgroundColor: widget.arcBackgroundColor,
+                    arcProgressGradientColors: widget.arcProgressGradientColors,
+                    enableStepperEffect: widget.enableStepperEffect,
+                    isRoundEdges: widget.isRoundEdges,
+                    isPrgressCurveFilled: widget.isPrgressCurveFilled,
+                  ),
+                ),
                 Align(
                   alignment:
                       Alignment.bottomCenter, // Adjust alignment as needed
@@ -170,7 +180,7 @@ class _PrimaryArcAnimationComponentState
                         score = scoreProgressAnimation.value.toStringAsFixed(
                             widget.isRoundOfScoreWhileProgress ? 0 : 2);
                       }
-                      var outOf = (scoreProgressController.status ==
+                      final outOf = (scoreProgressController.status ==
                                   AnimationStatus.completed &&
                               widget.showOutOfScoreFormat)
                           ? '/${widget.maxScore.toStringAsFixed(0)}'

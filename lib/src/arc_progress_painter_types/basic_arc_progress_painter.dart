@@ -54,13 +54,14 @@ class BasicArcProgressPainter extends CustomPainter {
     );
     canvas.saveLayer(
       Rect.fromCenter(
-          center: center,
-          width: arcWidth + backgroundArcStrokeThickness,
-          height: arcHeight + backgroundArcStrokeThickness),
+        center: center,
+        width: arcWidth + backgroundArcStrokeThickness,
+        height: arcHeight + backgroundArcStrokeThickness,
+      ),
       Paint(),
     );
 
-    Gradient gradient = SweepGradient(
+    final Gradient gradient = SweepGradient(
       startAngle: 1.25 * math.pi / 2,
       endAngle: 5.5 * math.pi / (enableStepperEffect ? 8 : 2),
       tileMode: TileMode.repeated,
