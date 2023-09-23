@@ -15,16 +15,11 @@ A Flutter package to display and visualize credit card scores, or any other type
 
 ## Previews
 
-![score_progress_pretty_display_1](https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/c1f44337-3c24-4c49-beda-81b5dbd54ec7)
+![preview_1](https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/3011093c-dddd-4d03-8462-9ee6014f7f84)
 
-![score_progress_pretty_display_2](https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/b2eaba62-e3f2-41ad-8f0d-31c3b176d767)
+![preview_2](https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/db286f52-463a-4629-a0e4-a69f691695fb)
 
-![score_progress_pretty_display_3](https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/4a55a672-fc0a-4adf-a91a-ce3eb7308de0)
-
-![score_progress_pretty_display_4](https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/e889a5e9-e56a-418b-bab3-9003a4b95300)
-
-![score_progress_pretty_display_5](https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/511a957c-353d-48c2-9cb1-353a0d917801)
-
+![preview_3](https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/c4ffc6d4-a072-466f-9152-f1645f039dfe)
 
 
 ## Features
