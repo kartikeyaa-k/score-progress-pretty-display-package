@@ -13,6 +13,9 @@ and the Flutter guide for
 
 A Flutter package to display and visualize credit card scores, or any other type of score, in a visually appealing way.
 
+## Previews
+
+
 ## Features
 
 - **Customizable:** You can customize the appearance of the score visualization, including the color, size, and animation.
@@ -61,10 +64,21 @@ PrimaryArcAnimationComponent(
 
 For a complete example, check the example directory included with this package.
 
-## Additional information
+## Contribution Guide
 
-1. Before submit PR
-Before submit any PR, you need to set githook on your machine by paste and run this command from your terminal at root project 
+1. Feel free to reach out for feedback/discussions on kartikeya.199231@gmail.com
+
+2. Before submit PR, you need to set githook on your machine by paste and run this command from your terminal at root project 
 ```
 git config core.hooksPath .githooks
 ```
+
+3. When you add new feature/fix issues, please make sure you update the documentation
+```
+dart doc .
+```
+4. If possible, I want to keep this package free from external dependencies.
+
+## Roadmap 
+
+1. I am planning to add new animations, curves in the next release.

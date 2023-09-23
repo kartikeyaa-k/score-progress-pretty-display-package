@@ -7,6 +7,13 @@ import 'package:score_progress_pretty_display/src/arc_progress_painter_types/bas
 /// [PrimaryArcAnimationComponent] expects some required named parameters and optional named parameters
 /// [score] is the final value for progress bar to stop
 /// [maxScore] is the maximum value for example : 10/100 where 10 is score and 100 is max score
+/// [minScoreTextFontSize] this font size is used to display score when progress bar is animating/in progress
+/// [maxScoreTextFontSize] this font size is used to display score post progress bar animation is completed
+/// [showOutOfScoreFormat] helps enabling/disabling following format : 10/100
+/// when disabled it will show just the score
+/// [scoreAnimationDuration] this animation duration is for the progress bar
+/// [scoreTextAnimationDuration] this animation duration is for the score text flipping
+/// [scoreTextStyle] this helps styling the score text
 ///
 class PrimaryArcAnimationComponent extends StatefulWidget {
   const PrimaryArcAnimationComponent({
