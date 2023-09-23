@@ -15,15 +15,16 @@ A Flutter package to display and visualize credit card scores, or any other type
 
 ## Previews
 
-https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/91747836-76a4-434d-8ea5-3d445674b3d9
+![score_progress_pretty_display_1](https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/c1f44337-3c24-4c49-beda-81b5dbd54ec7)
 
-https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/bd7af7e4-3409-49f2-9c74-e1bc2b5de2bf
+![score_progress_pretty_display_2](https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/b2eaba62-e3f2-41ad-8f0d-31c3b176d767)
 
-https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/9b5270e7-61b7-46fe-95b0-4f3b50f86f2f
+![score_progress_pretty_display_3](https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/4a55a672-fc0a-4adf-a91a-ce3eb7308de0)
 
-https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/55f75e4e-f0ff-41cb-a85f-3759babbbba0
+![score_progress_pretty_display_4](https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/e889a5e9-e56a-418b-bab3-9003a4b95300)
 
-https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/a37e7626-af33-4b66-b61a-9dc059d81c99
+![score_progress_pretty_display_5](https://github.com/kartikeyaa-k/score-progress-pretty-display-package/assets/67781046/511a957c-353d-48c2-9cb1-353a0d917801)
+
 
 
 ## Features
