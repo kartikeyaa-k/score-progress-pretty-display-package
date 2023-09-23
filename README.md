@@ -27,7 +27,7 @@ Add the following dependency to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  your_package_name: ^1.0.0 # Use the latest version
+  score_progress_pretty_display: ^1.0.0 # Use the latest version
 ```
 
 ## Usage
@@ -63,7 +63,7 @@ For a complete example, check the example directory included with this package.
 
 ## Additional information
 
-##1. Before submit PR
+1. Before submit PR
 Before submit any PR, you need to set githook on your machine by paste and run this command from your terminal at root project 
 ```
 git config core.hooksPath .githooks
