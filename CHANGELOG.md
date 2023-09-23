@@ -10,3 +10,6 @@
 
 * This release contains : Better updated previews of the widget on pub dev, other than this there is no change
 
+## 1.0.3
+
+* This release contains : Added actual package dependency inside example, other than this there is no change
