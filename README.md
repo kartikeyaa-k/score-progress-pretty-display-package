@@ -49,7 +49,7 @@ dependencies:
 
 ```dart
 PrimaryArcAnimationComponent(
-          score: 77.42,
+          score: 77,
           maxScore: 100,
           arcHeight: 340,
           arcWidth: 340,
@@ -62,13 +62,17 @@ PrimaryArcAnimationComponent(
           isRoundOfScoreWhileProgress: true,
           isRoundOffScore: true,
           showOutOfScoreFormat: true,
+          isPrgressCurveFilled: false,
+          scoreAnimationDuration: Duration(seconds: 2),
+          scoreTextAnimationDuration: Duration(milliseconds: 500),
+          scoreTextStyle: TextStyle(fontWeight: FontWeight.normal, height: 1),
           arcBackgroundColor: Colors.black12,
           arcProgressGradientColors: [
             Colors.yellowAccent,
             Colors.greenAccent,
             Colors.green,
           ],
-        ),
+        )
 ```
 
 ## Example 

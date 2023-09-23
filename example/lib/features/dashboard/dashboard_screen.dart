@@ -19,7 +19,7 @@ class DashboardScreen extends StatelessWidget {
       ),
       body: const Center(
         child: PrimaryArcAnimationComponent(
-          score: 77.42,
+          score: 77,
           maxScore: 100,
           arcHeight: 340,
           arcWidth: 340,
@@ -32,6 +32,10 @@ class DashboardScreen extends StatelessWidget {
           isRoundOfScoreWhileProgress: true,
           isRoundOffScore: true,
           showOutOfScoreFormat: true,
+          isPrgressCurveFilled: false,
+          scoreAnimationDuration: Duration(seconds: 2),
+          scoreTextAnimationDuration: Duration(milliseconds: 500),
+          scoreTextStyle: TextStyle(fontWeight: FontWeight.normal, height: 1),
           arcBackgroundColor: Colors.black12,
           arcProgressGradientColors: [
             Colors.yellowAccent,

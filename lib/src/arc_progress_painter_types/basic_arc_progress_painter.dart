@@ -2,6 +2,10 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
+/// [BasicArcProgressPainter] is a basic painter class
+/// This class will paint an Arc with given specifications
+/// For better understanding of the parameters meaning please follow [primary_arc_animation_component] documentations
+
 class BasicArcProgressPainter extends CustomPainter {
   final double currentValue;
   final double destinatonValue;
