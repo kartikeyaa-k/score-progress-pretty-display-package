@@ -28,7 +28,7 @@ class DashboardScreen extends StatelessWidget {
           isRoundEdges: false,
           minScoreTextFontSize: 30,
           maxScoreTextFontSize: 50,
-          isRoundOfScoreWhileProgress: true,
+          isRoundOffScoreWhileProgress: true,
           isRoundOffScore: true,
           showOutOfScoreFormat: true,
           isPrgressCurveFilled: false,

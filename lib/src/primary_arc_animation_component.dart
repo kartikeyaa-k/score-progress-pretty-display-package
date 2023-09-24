@@ -3,19 +3,34 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:score_progress_pretty_display/src/arc_progress_painter_types/basic_arc_progress_painter.dart';
 
-/// This is component represents basic progress arc with animation and score text
-/// [PrimaryArcAnimationComponent] expects some required named parameters and optional named parameters
-/// [score] is the final value for progress bar to stop
-/// [maxScore] is the maximum value for example : 10/100 where 10 is score and 100 is max score
-/// [minScoreTextFontSize] this font size is used to display score when progress bar is animating/in progress
-/// [maxScoreTextFontSize] this font size is used to display score post progress bar animation is completed
-/// [showOutOfScoreFormat] helps enabling/disabling following format : 10/100
-/// when disabled it will show just the score
-/// [scoreAnimationDuration] this animation duration is for the progress bar
-/// [scoreTextAnimationDuration] this animation duration is for the score text flipping
-/// [scoreTextStyle] this helps styling the score text
+/// [PrimaryArcAnimationComponent] A widget that displays an animated progress arc with a score text.
 ///
+/// This widget is used to visually represent a score or progress with an animated
+/// arc and an optional score text.
 class PrimaryArcAnimationComponent extends StatefulWidget {
+  /// Creates a [PrimaryArcAnimationComponent].
+  ///
+  /// The [score] is the final value for the progress arc to stop.
+  /// The [maxScore] is the maximum possible score or value.
+  /// The [arcHeight] is the height of the progress arc.
+  /// The [arcWidth] is the width of the progress arc.
+  /// The [backgroundArcStrokeThickness] is the thickness of the background arc.
+  /// The [progressArcStrokeThickness] is the thickness of the progress arc.
+  ///
+  /// Additional parameters allow customization of appearance and behavior:
+  /// - [minScoreTextFontSize] : The minimum font size for the score text.
+  /// - [maxScoreTextFontSize] : The maximum font size for the score text.
+  /// - [arcBackgroundColor] : The background color of the progress arc.
+  /// - [arcProgressGradientColors] : List of colors for a gradient effect on the progress arc.
+  /// - [enableStepperEffect] : Whether to enable a stepwise animation effect when the score changes.
+  /// - [isRoundEdges] : Whether to round the edges of the progress arc.
+  /// - [isPrgressCurveFilled] : Whether to fill the progress arc with color.
+  /// - [showOutOfScoreFormat] : Whether to show the "/maxScore" format after the score when animation completes.
+  /// - [isRoundOffScore] : Whether to round off the score value.
+  /// - [isRoundOffScoreWhileProgress] : Whether to round off the score value while the progress is ongoing.
+  /// - [scoreAnimationDuration] : The duration of the score animation.
+  /// - [scoreTextAnimationDuration] : The duration of the score text animation.
+  /// - [scoreTextStyle] : The text style for the score text.
   const PrimaryArcAnimationComponent({
     Key? key,
     required this.score,
@@ -33,7 +48,7 @@ class PrimaryArcAnimationComponent extends StatefulWidget {
     this.isPrgressCurveFilled = false,
     this.showOutOfScoreFormat = true,
     this.isRoundOffScore = true,
-    this.isRoundOfScoreWhileProgress = true,
+    this.isRoundOffScoreWhileProgress = true,
     this.scoreAnimationDuration = const Duration(seconds: 2),
     this.scoreTextAnimationDuration = const Duration(milliseconds: 800),
     this.scoreTextStyle = const TextStyle(
@@ -42,31 +57,61 @@ class PrimaryArcAnimationComponent extends StatefulWidget {
     ),
   }) : super(key: key);
 
+  /// The final value for the progress arc to stop.
   final double score;
+
+  /// The maximum possible score or value.
   final double maxScore;
 
+  /// The height of the progress arc.
   final double arcHeight;
+
+  /// The width of the progress arc.
   final double arcWidth;
 
+  /// The thickness of the background arc.
   final double backgroundArcStrokeThickness;
+
+  /// The thickness of the progress arc.
   final double progressArcStrokeThickness;
 
+  /// The minimum font size for the score text.
   final double minScoreTextFontSize;
+
+  /// The maximum font size for the score text.
   final double maxScoreTextFontSize;
 
+  /// The background color of the progress arc.
   final Color arcBackgroundColor;
+
+  /// List of colors for a gradient effect on the progress arc.
   final List<Color> arcProgressGradientColors;
 
+  /// Whether to enable a stepwise animation effect when the score changes.
   final bool enableStepperEffect;
+
+  /// Whether to round the edges of the progress arc.
   final bool isRoundEdges;
+
+  /// Whether to fill the progress arc with color.
   final bool isPrgressCurveFilled;
 
+  /// Whether to show the "/maxScore" format after the score when animation completes.
   final bool showOutOfScoreFormat;
-  final bool isRoundOffScore;
-  final bool isRoundOfScoreWhileProgress;
 
+  /// Whether to round off the score value.
+  final bool isRoundOffScore;
+
+  /// Whether to round off the score value while the progress is ongoing.
+  final bool isRoundOffScoreWhileProgress;
+
+  /// The duration of the score animation.
   final Duration scoreAnimationDuration;
+
+  /// The duration of the score text animation.
   final Duration scoreTextAnimationDuration;
+
+  /// The text style for the score text.
   final TextStyle scoreTextStyle;
 
   @override
@@ -183,7 +228,7 @@ class _PrimaryArcAnimationComponentState
                     if (scoreProgressController.status !=
                         AnimationStatus.completed) {
                       score = scoreProgressAnimation.value.toStringAsFixed(
-                        widget.isRoundOfScoreWhileProgress ? 0 : 2,
+                        widget.isRoundOffScoreWhileProgress ? 0 : 2,
                       );
                     }
                     final outOf = (scoreProgressController.status ==

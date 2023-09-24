@@ -2,25 +2,22 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
-/// [BasicArcProgressPainter] is a basic painter class
-/// This class will paint an Arc with given specifications
-/// For better understanding of the parameters meaning please follow [primary_arc_animation_component] documentations
-
+/// A custom painter for rendering an animated progress arc with customizable properties.
 class BasicArcProgressPainter extends CustomPainter {
-  final double currentValue;
-  final double destinatonValue;
-  final double totalValue;
-  final double arcHeight;
-  final double arcWidth;
-  final double backgroundArcStrokeThickness;
-  final double progressArcStrokeThickness;
-
-  final Color arcBackgroundColor;
-  final List<Color> arcProgressGradientColors;
-  final bool enableStepperEffect;
-  final bool isPrgressCurveFilled;
-  final bool isRoundEdges;
-
+  /// Creates a [BasicArcProgressPainter] with the specified properties.
+  ///
+  /// The [currentValue] represents the current progress value.
+  /// The [destinatonValue] is the target value for the progress arc.
+  /// The [totalValue] represents the maximum possible progress.
+  /// The [arcHeight] is the height of the progress arc.
+  /// The [arcWidth] is the width of the progress arc.
+  /// The [backgroundArcStrokeThickness] is the thickness of the background arc.
+  /// The [progressArcStrokeThickness] is the thickness of the progress arc.
+  /// The [arcBackgroundColor] is the background color of the progress arc.
+  /// The [arcProgressGradientColors] is a list of colors for a gradient effect.
+  /// The [enableStepperEffect] enables a stepwise animation effect.
+  /// The [isPrgressCurveFilled] determines whether to fill the progress arc.
+  /// The [isRoundEdges] specifies whether to round the edges of the arc.
   BasicArcProgressPainter({
     required this.currentValue,
     required this.destinatonValue,
@@ -35,6 +32,42 @@ class BasicArcProgressPainter extends CustomPainter {
     this.isPrgressCurveFilled = false,
     this.isRoundEdges = true,
   });
+
+  /// The current value of the progress arc.
+  final double currentValue;
+
+  /// The destination value for the progress arc to reach.
+  final double destinatonValue;
+
+  /// The total value representing the maximum possible progress.
+  final double totalValue;
+
+  /// The height of the progress arc.
+  final double arcHeight;
+
+  /// The width of the progress arc.
+  final double arcWidth;
+
+  /// The thickness of the background arc.
+  final double backgroundArcStrokeThickness;
+
+  /// The thickness of the progress arc.
+  final double progressArcStrokeThickness;
+
+  /// The background color of the progress arc.
+  final Color arcBackgroundColor;
+
+  /// List of colors for a gradient effect on the progress arc.
+  final List<Color> arcProgressGradientColors;
+
+  /// Whether to enable a stepwise animation effect when the score changes.
+  final bool enableStepperEffect;
+
+  /// Whether to fill the progress arc with color.
+  final bool isPrgressCurveFilled;
+
+  /// Whether to round the edges of the progress arc.
+  final bool isRoundEdges;
 
   @override
   void paint(Canvas canvas, Size size) {

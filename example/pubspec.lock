@@ -110,11 +110,10 @@ packages:
   score_progress_pretty_display:
     dependency: "direct main"
     description:
-      name: score_progress_pretty_display
-      sha256: "76431470fb637a85152b2fd682eed928b38468fc5291259ac5c924c1f91de3fd"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.2"
+      path: ".."
+      relative: true
+    source: path
+    version: "1.0.3"
   sky_engine:
     dependency: transitive
     description: flutter
