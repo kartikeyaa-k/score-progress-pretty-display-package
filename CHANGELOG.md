@@ -17,3 +17,7 @@
 ## 1.0.4
 
 * This release contains : Added pending documentation, other than this there is no change
+
+## 1.0.5
+
+* This release contains : Updated readme.md with usage example, other than this there is no change
