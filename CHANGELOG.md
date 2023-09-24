@@ -13,3 +13,7 @@
 ## 1.0.3
 
 * This release contains : Added actual package dependency inside example, other than this there is no change
+
+## 1.0.4
+
+* This release contains : Added pending documentation, other than this there is no change
